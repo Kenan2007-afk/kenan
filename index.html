@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>İsmayılov Kenan — Şəxsi Sayt</title>
+  <style>
+    :root{
+      --accent-1: #3309dd;
+      --accent-2: #4b23bb;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.6);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg), #eef4ff);
+      color:#12263a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .z {
+      background:var(--card);
+      border-radius:12px;
+      padding-top: 10px;
+      padding-left: 15px;
+      box-shadow: 0 6px 20px rgba(16,24,40,0.06);
+    }
+
+    .wrapper{
+      max-width:1000px;
+      margin:32px auto;
+      padding:24px;
+    }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      background: linear-gradient(90deg, var(--accent-1), #9b7bff 60%);
+      padding:18px;
+      border-radius:14px;
+      color:white;
+      box-shadow: 0 8px 30px rgba(88,99,200,0.12);
+    }
+
+    .avatar {
+      width:110px;
+      height:110px;
+      border-radius:16px;
+      overflow:hidden;
+      background:linear-gradient(135deg, rgba(255,255,255,0.15), rgba(0,0,0,0.05));
+      flex:0 0 110px;
+      border:3px solid rgba(255,255,255,0.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover; display:block}
+
+    .title {
+      flex:1;
+    }
+    .title h1{margin:0; font-size:20px; letter-spacing:0.2px}
+    .title p{margin:6px 0 0; opacity:0.95}
+
+    .top-meta{
+      text-align:right;
+      font-size:13px;
+      opacity:0.95;
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+      margin-top:20px;
+    }
+
+    /* LEFT column */
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow: 0 6px 20px rgba(16,24,40,0.06);
+    }
+
+    h2.section-title{
+      margin:0 0 12px 0;
+      font-size:16px;
+      color:var(--accent-1);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .about p{margin:0 0 10px 0; color:var(--muted)}
+    .list{display:flex; flex-wrap:wrap; gap:8px}
+    .pill{
+      background:linear-gradient(90deg, rgba(91,140,255,0.12), rgba(126,246,199,0.06));
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+      color: #0b2546;
+      box-shadow: 0 2px 6px rgba(14,25,40,0.04);
+    }
+
+    /* Skills with bars */
+    .skill{
+      margin-bottom:10px;
+    }
+    .skill .label{
+      display:flex; justify-content:space-between; font-size:13px; color:var(--muted);
+    }
+    .bar{
+      height:10px; background: #e9f2ff; border-radius:999px; margin-top:6px; overflow:hidden;
+    }
+    .bar > span{
+      display:block; height:100%; border-radius:999px;
+      background: linear-gradient(90deg, var(--accent-1), #083cca);
+    }
+
+    /* RIGHT column */
+    .profile-card{
+      display:flex; flex-direction:column; gap:12px; align-items:center; text-align:center;
+      padding-top:24px;
+    }
+    .profile-card h3{margin:0}
+    .meta small{color:var(--muted)}
+
+    .contact-list{width:100%}
+    .contact-item{
+      display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:10px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.01), rgba(255,255,255,0.6));
+      margin-bottom:8px;
+      font-weight:600;
+    }
+    .contact-item a{color:inherit; text-decoration:none}
+
+    footer{margin-top:22px; text-align:center; color:var(--muted); font-size:13px}
+
+    /* Responsive */
+    @media (max-width:940px){
+      main{grid-template-columns:1fr; }
+      .avatar{width:96px; height:96px; flex:0 0 96px}
+      .top-meta{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="avatar">
+        <!-- Şəkli əlavə etmək üçün: qovluğa profile.jpg qoy -->
+        <img src="kanan.png" alt="kenan">
+      </div>
+      <div class="title">
+        <h1>İsmayılov Kenan Sahil oğlu</h1>
+        <p>Doğum: 01.02.2008 — Cəlilabad rayon Göytəpə qəsəbəsində anadan olmuşam</p>
+      </div>
+      <div class="top-meta">
+        <div>Vəziyyət: Peşə təhsili — Veb dizayn & Proqram təminatı</div>
+        <div>Qəbul: 2023 — Cəlilabad Dövlət Peşə Təhsil Mərkəzi</div>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT: əsas məzmun -->
+      <section>
+        <div class="card about">
+          <h2 class="section-title">1. Haqqımda</h2>
+          <p>
+            Mən İsmayılov Kenan Sahil oğlu. 01.02.2008-ci ildə Cəlilabad rayon Göytəpə qəsəbəsində anadan olmuşam.
+            2014-cü ildə V. Mürsəlov adına 1 saylı tam orta məktəbə başlamışam və 9-cu sinfə qədər təhsil almışam.
+            2023-cü ildə Cəlilabad Dövlət Peşə Təhsil Mərkəzinə qəbul olunmuşam. Həmin mərkəzin "Veb dizayn, proqram təminatı" kursunun 3-cü kurs tələbəsiyəm.
+            İxtisasım mənim üçün çox maraqlıdır və bu sahədə özümü inkişaf etdirməyi sevirəm.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h2 class="section-title">2. Hobbilərim</h2>
+          <div class="list" aria-hidden="false">
+            <div class="pill">Futbol oynamaq</div>
+            <div class="pill">İdmanla məşğul olmaq</div>
+            <div class="pill">Maraqlı oyunlar oynamaq</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h2 class="section-title">3. Bacarıqlarım</h2>
+
+          <div class="skill">
+            <div class="label"><span>HTML</span><span>Yaxşı</span></div>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="label"><span>CSS</span><span>Yaxşı</span></div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="label"><span>JavaScript</span><span>Orta</span></div>
+            <div class="bar"><span style="width:65%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="label"><span>JAVA</span><span>Orta</span></div>
+            <div class="bar"><span style="width:60%"></span></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h2 class="section-title">4. Oxuduğum yer</h2>
+          <p style="margin:0;color:var(--muted)">
+            V. Mürsəlov adına 1 saylı tam orta məktəb — 2014-cü ildən başlayaraq (9-cu sinfə qədər).<br>
+            2023 — Cəlilabad Dövlət Peşə Təhsil Mərkəzinə qəbul olunmuşam (Veb dizayn, proqram təminatı kursu, 3-cü kurs tələbəsi).
+          </p>
+        </div>
+      </section>
+
+      <!-- RIGHT: profil və əlaqə -->
+      <aside>
+        <div class="card profile-card">
+          <h3>Profil</h3>
+          <div class="meta">
+            <div><strong>İsmayılov Kenan Sahil oğlu</strong></div>
+            <small>Doğum: 01.02.2008</small>
+          </div>
+          <p style="max-width:260px; color:var(--muted)">
+            Öz üzərində çalışan, Veb dizayn və proqram təminatı sahəsinə maraqlı tələbə. İnkişaf etməyə açıq və komanda ilə işləməyi sevir.
+          </p>
+
+          <div class="contact-list" style="width:100%">
+            <div class="contact-item"><strong>Telefon:</strong>&nbsp;<a href="tel:+994505856475">0505856475</a></div>
+            <div class="contact-item"><strong>Instagram:</strong>&nbsp;<a href="https://instagram.com/knanısmaylov15" target="_blank" rel="noreferrer">@knanısmaylov15</a></div>
+            <div class="contact-item"><strong>TikTok:</strong>&nbsp;<span>9.99.999.9999</span></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px;">
+          <h2 class="section-title">Qısa xülasə</h2>
+          <p style="margin:0;color:var(--muted)">
+            İsmayılov Kenan — Veb dizayn və proqram təminatı tələbəsi. Bacarıqlar: HTML, CSS, JavaScript, JAVA. Hobbilər: futbol, idman, oyunlar.
+          </p>
+        </div>
+        <br><br>
+        
+       
+
+        <footer>
+          © <span id="year"></span> İsmayılov Kenan — Bütün hüquqlar qorunur
+        </footer>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    // Dinamik il
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>ss
